@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f1f7fa;
+}
+.container {
+  width: 90%;
+  margin: 3rem auto;
+}
+.flaxible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.half-width {
+  width: 50%;
+  padding: 1rem;
+}
+.half-width img {
+  width: 90%;
+}
+.half-width > * {
+  margin-bottom: 1.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f1f7fa;
+  background-color: #ee356f;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.btn:hover {
+  background-color: #b6108a;
+}
+.text-center {
+  text-align: center;
+}
+
+img#animation {
+  transition: all ease 0.5s;
+}
+img#animation:hover {
+  transform: scale(1.2) rotate(20deg);
+}
+.payment-container {
+  width: 75%;
+  margin: 2rem auto;
+  padding: 0.2rem;
+  border-radius: 10px;
+  background: linear-gradient(to right, #f1f7fa, rgb(177, 174, 174), #f1f7fa);
+}
+.payment-item {
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #f1f7fa;
+}
+.payment-dvider img {
+  margin-right: 5%;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.payment-dvider {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.payment-dvider img:hover {
+  background-color: #f9fdff;
+  cursor: pointer;
+}
+.popular-collection h1 {
+  font-size: 2rem;
+  color: #3a3a3a;
+  margin-bottom: 2rem;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.card {
+  max-height: 550px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 30px rgb(212, 209, 209);
+  padding: 1rem;
+  color: #18191faf;
+  overflow: hidden;
+  transition: all ease 0.5s;
+}
+.card:hover {
+  background-color: #ffffff;
+}
+.card > * {
+  margin-bottom: 0.8rem;
+}
+.card h2:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.card-img img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  transition: all ease 0.3;
+}
+.card-img img:hover {
+  opacity: 0.9;
+}
+.fa-star,
+.fa-star-half-alt {
+  color: #fb8200;
+  font-size: 0.8rem;
+}
+#see-moore {
+  font-weight: 600;
+  color: #ee356f;
+  float: right;
+  margin-top: 1rem;
+}
+#see-moore:hover {
+  color: #ff2dc7;
+  text-decoration: underline;
+}
+.container-bonus {
+  width: 90%;
+  margin: 3rem auto;
+  background-color: #5490da;
+  border-radius: 10px;
+  padding: 5rem 0rem;
+  text-align: center;
+  position: relative;
+}
+.container-bonus h1,
+.container-bonus h3 {
+  margin: 0.8rem 0rem;
+  color: #fff;
+}
+.container-bonus h3:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.container-bonus::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  width: 100px;
+  height: 20px;
+  background: linear-gradient(to top, #ffffff, black);
+  border-radius: 50%;
+  transform: rotate(-40deg);
+}
+.container-bonus::after {
+  content: "";
+  position: absolute;
+  top: 60px;
+  right: 40px;
+  width: 100px;
+  height: 20px;
+  background: linear-gradient(to top, #ffffff, black);
+  border-radius: 50%;
+  transform: rotate(40deg);
+}
+.content {
+  position: relative;
+}
+.content::before {
+  content: "";
+  position: absolute;
+  height: 20%;
+  top: -40px;
+  left: 100px;
+  width: 60px;
+  filter: blur(60px);
+  background: linear-gradient(white, white);
+  transform: rotate(-45deg);
+  box-shadow: 5px 150px 200px 100px rgb(255, 255, 255);
+  transition: all ease 0.8s;
+}
+.content::after {
+  content: "";
+  position: absolute;
+  height: 20%;
+  top: -40px;
+  right: 100px;
+  width: 60px;
+  filter: blur(60px);
+  background: linear-gradient(white, white);
+  transform: rotate(45deg);
+  box-shadow: -5px 150px 200px 100px rgb(255, 255, 255);
+  transition: all ease 0.8s;
+}
+.profile {
+  display: block;
+  width: 25%;
+  border-radius: 50%;
+  margin: 1rem auto;
+  transition: all ease 1s;
+}
+.container-bonus:hover .profile {
+  transform: scale(1.2);
+}
+.container-bonus:hover .content::before {
+  animation-duration: 3s;
+  animation-name: shadow-move1;
+  animation-iteration-count: infinite;
+}
+@keyframes shadow-move1 {
+  0% {
+    height: 20%;
+    top: -40px;
+    left: 100px;
+  }
+  50% {
+    height: 60%;
+    top: -60px;
+    left: 180px;
+  }
+  100% {
+    height: 80%;
+    top: -70px;
+    left: 200px;
+  }
+}
+@keyframes shadow-move2 {
+  0% {
+    height: 20%;
+    top: -40px;
+    right: 100px;
+  }
+  50% {
+    height: 80%;
+    top: -70px;
+    right: 200px;
+  }
+  100% {
+    height: 60%;
+    top: -60px;
+    right: 180px;
+  }
+}
+.container-bonus:hover .content::after {
+  animation-duration: 3s;
+  animation-name: shadow-move2;
+  animation-iteration-count: infinite;
+}
+footer {
+  background-color: #0a0826;
+  color: #d9dbe1;
+  text-align: center;
+  padding: 4rem 0rem;
+}
+footer a {
+  color: white;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer > * {
+  margin-bottom: 0.6rem;
+}
+.icon i {
+  font-size: 24px;
+  padding: 1rem;
+  background-color: #22213c;
+  border-radius: 50%;
+  margin: 0.8rem;
+  cursor: pointer;
+  color: white;
+}
+.icon i:hover {
+  background-color: #393857;
+}
+@media screen and (max-width: 576px) {
+  .flaxible {
+    flex-direction: column-reverse;
+  }
+  .half-width {
+    width: 100%;
+  }
+  .payment-item {
+    flex-direction: column;
+  }
+  .payment-dvider {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #featured-products {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 800px) {
+  .flaxible {
+    flex-direction: column-reverse;
+  }
+  .half-width {
+    width: 100%;
+  }
+  .payment-item {
+    flex-direction: column;
+  }
+  .payment-dvider {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #featured-products {
+    flex-direction: column;
+  }
+}
